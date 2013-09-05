@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin version="1.1">
+  <title>FootNote</title>
+  <version>0.4.1</version>
+  <description>주석을 모아모아 보여줍니다.</description>
+  <license>GPL</license>
+  <link>http://fun.tistory.com/entry/FootNote</link>
+  <author link="http://fun.tistory.com/"><![CDATA[gofeel]]></author>
+  <safety changeData="no" exposeData="no" accessLocal="yes" accessRemote="no" accessRaw="yes" />
+  <requirements>
+    <tattertools>1.1</tattertools>
+  </requirements>
+  <binding>
+    <listener event="ViewPostContent">FootNote</listener>
+    <listener event="AddPostEditorToolbox">FootNoteIcon</listener>
+	<tag name="SKIN_head_end" handler="FootNoteCss" />
+	<config dataValHandler="">
+		<window width="600" height="410" />
+		<fieldset legend="1. Replacing Text">
+			<field title="1)" name="rt1" type="checkbox">
+				<op name="rt_1" value="1" checked="checked">[footnote]BlahBlah[/footnote]</op>
+			</field>
+			<field title="2)" name="rt2" type="checkbox">
+				<op name="rt_2" value="1">(주:BlahBlah)</op>
+				</field>
+			<field title="3)" name="rt3" type="checkbox">
+				<op name="rt_3" value="1">[fn]BlahBlah[/fn]</op>
+				</field>
+			<field title="4)" name="rt4" type="checkbox">
+				<op name="rt_4" value="1">[각주]BlahBlah[/각주]</op>
+			</field>
+		</fieldset>
+		<fieldset legend="2. Style">
+			<field title="CSS" name="css" type="select">
+				<op value="0" checked="checked">disabled</op>
+				<op value="1">1. White background, Gray border</op>
+				<op value="2">2. Green</op>
+			</field>
+			<field title="Title option" name="title_option" type="radio">
+				<op value="0">disabled</op>
+				<op value="1" checked="checked">1. Text</op>
+				<op value="2">2. Icon</op>
+			</field>
+			<field title="Title Caption" name="title_caption" type="text" size ="12" value="Footnote."/>
+			<field title="Title Icon" name="title_icon" type="select">
+				<op value="dizzle/title.gif" checked="checked">1. dizzle</op>
+				<op value="nani/footnote.gif">2. nani_eng</op>
+				<op value="nani/footnote_ko.gif">3. 나니_한글</op>
+				<op value="crimsonblu/foottitle.jpg">4. crimsonblu</op>
+			</field>
+			<field title="Back to text Option" name="back_option" type="radio">
+				<op value="0" checked="checked">1. Text</op>
+				<op value="1">2. Icon</op>
+			</field>
+			<field title="Back to text caption" name="back_caption" type="text" size ="12" value="[Back]"/>
+			<field title="Back to text Icon" name="back_icon" type="select">
+				<op value="dizzle/btt.gif" checked="checked">1. dizzle</op>
+				<op value="nani/back.gif">2. nani_eng</op>
+				<op value="nani/back_ko.gif">3. 나니_한글</op>
+				<op value="crimsonblu/walk.jpg">4. crimsonblu</op>
+			</field>
+			</fieldset>
+ 	</config>
+  </binding>
+</plugin>
