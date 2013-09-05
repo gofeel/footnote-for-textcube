@@ -1,4 +1,4 @@
 footnote-for-textcube
 =====================
 
-A footnote plugin for Textcube.
+http://www.textcube.org/plugin/316
